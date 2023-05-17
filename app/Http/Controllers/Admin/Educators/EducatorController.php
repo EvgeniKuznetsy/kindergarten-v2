@@ -17,7 +17,7 @@ class EducatorController extends Controller
     {
         $id=$request->educator_group_id;
         $path = $request->file('image')->store('public');
-        $path = str_replace('public', '/storage', $path);
+        $path = str_replace('public', '/storage/public', $path);
 
         $educator = Educator::create([
             'full_name' => $request->full_name,
@@ -38,7 +38,7 @@ class EducatorController extends Controller
         ];
         if ($request->image) {
             $path = $request->file('image')->store('public');
-            $params['image'] = str_replace('public', '/storage', $path);
+            $params['image'] = str_replace('public', '/storage/public', $path);
         }
 
         $post->update($params);

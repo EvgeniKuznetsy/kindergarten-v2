@@ -14,7 +14,7 @@ class ParentsController extends Controller
         $path = $request->file('image')->store('public');
         $path = str_replace('public', '/storage', $path);
         $document= $request->file('document')->store('public');
-        $path = str_replace('public', '/storage', $document);
+        $path = str_replace('public', '/storage/public', $document);
         $parents = For_parents::create([
             'title' => $request->title,
             'text' => $request->text,

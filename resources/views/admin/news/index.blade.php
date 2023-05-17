@@ -8,7 +8,7 @@
             @forelse($news as $post)
                 <div class="card">
                     <img src="{{$post->image}}" class="col-5 width_image" alt="{{$post->title}}">
-
+                        {{$post->image}}
                         <div class="h2">{{$post->title}}</div>
                         <div class="">{{$post->text}}</div>
                         <div class="mt-2">

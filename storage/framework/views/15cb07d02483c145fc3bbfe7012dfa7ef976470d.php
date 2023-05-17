@@ -6,6 +6,7 @@
             <?php $__empty_1 = true; $__currentLoopData = $news; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); $__empty_1 = false; ?>
                 <div class="card">
                     <img src="<?php echo e($post->image); ?>" class="col-5 width_image" alt="<?php echo e($post->title); ?>">
+                        <?php echo e($post->image); ?>
 
                         <div class="h2"><?php echo e($post->title); ?></div>
                         <div class=""><?php echo e($post->text); ?></div>

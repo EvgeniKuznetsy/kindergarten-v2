@@ -11,7 +11,7 @@ class NewsController extends Controller
     public function create(Request $request): \Illuminate\Http\RedirectResponse
     {
         $path = $request->file('image')->store('public');
-        $path = str_replace('public', '/storage', $path);
+        $path = str_replace('public', '/storage/public', $path);
 
         $news = News::create([
             'title' => $request->title,
@@ -29,7 +29,7 @@ class NewsController extends Controller
 
         if ($request->image) {
             $path = $request->file('image')->store('public');
-            $params['image'] = str_replace('public', '/storage', $path);
+            $params['image'] = str_replace('public', '/storage/public', $path);
         }
 
         $news->update($params);

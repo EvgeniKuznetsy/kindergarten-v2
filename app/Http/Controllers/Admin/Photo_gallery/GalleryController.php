@@ -16,7 +16,7 @@ class GalleryController extends BaseController
         $id=$request->title_photo_gallery_id;
 
         $path = $request->file('image')->store('public');
-        $path = str_replace('public', '/storage', $path);
+        $path = str_replace('public', '/storage/public', $path);
         $photo_gallery = Photo_gallery::create([
             'image' => $path,
             'title_photo_gallery_id'=>$request->title_photo_gallery_id,
@@ -32,7 +32,7 @@ class GalleryController extends BaseController
         $params = [];
         if ($request->image) {
             $path = $request->file('image')->store('public');
-            $params['image'] = str_replace('public', '/storage', $path);
+            $params['image'] = str_replace('public', '/storage/public', $path);
         }
         $photo->update($params);
 
