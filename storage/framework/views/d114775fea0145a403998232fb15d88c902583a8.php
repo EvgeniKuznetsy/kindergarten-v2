@@ -6,10 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>">
-    <link rel="stylesheet" href="<?php echo e(asset('css/app.css')); ?>">
-    <script src="<?php echo e(asset('js/app.js')); ?>"></script>
-    <link rel="stylesheet" href="<?php echo e(asset('fontawesome/css/all.css')); ?>">
-    <link rel="stylesheet" href="<?php echo e(asset('css/style.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('https://bcfc-31-135-250-34.ngrok-free.app/css/app.css')); ?>">
+    <script src="<?php echo e(asset('https://bcfc-31-135-250-34.ngrok-free.app/js/app.js')); ?>"></script>
+    <link rel="stylesheet" href="<?php echo e(asset('https://bcfc-31-135-250-34.ngrok-free.app/fontawesome/css/all.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('https://bcfc-31-135-250-34.ngrok-free.app/css/style.css')); ?>">
 
     <title><?php echo $__env->yieldContent('title'); ?></title>
 </head>
